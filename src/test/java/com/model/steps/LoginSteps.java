@@ -42,7 +42,6 @@ public class LoginSteps
 	public void enterApplicationUrl(String url)
 	{
 		Config.driver.get(url);
-		
 	}
 	
 	@And ("^user waits \"(.*)\" seconds to Login page to be loaded$")
@@ -75,14 +74,12 @@ public class LoginSteps
 	public void enterUserName(String username)
 	{
 		Config.driver.findElement(By.xpath("//input[@name='userName']")).sendKeys(username);
-		System.out.println("Username entered successfully");
 	}
 	
 	@And ("^user enters \"(.*)\" as password$")
 	public void enterPassword(String password)
 	{
 		Config.driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
-		System.out.println("Password entered successfully");
 	}
 	
 	@And ("^user clicks on Sign In button$")
